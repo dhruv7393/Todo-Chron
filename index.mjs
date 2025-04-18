@@ -3,9 +3,9 @@ import axios from "axios";
 export const handler = async (event) => {
   const config1 = {
     method: "get",
-    url: "https://main.d3blcxzr0t6m0f.amplifyapp.com/api/chron",
+    url: "https://main.dgsooy6yeh5ar.amplifyapp.com/api/chron",
     headers: {},
-    timeout: 30000,
+    timeout: 60000,
   };
 
   const request1 = axios(config1);
