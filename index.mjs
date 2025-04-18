@@ -4,6 +4,9 @@ export const handler = async (event) => {
   const config = {
     method: "get",
     url: "https://main.dgsooy6yeh5ar.amplifyapp.com/api/chron",
+    headers: {
+      "Content-Type": "application/json",
+    },
     data: {},
   };
 
