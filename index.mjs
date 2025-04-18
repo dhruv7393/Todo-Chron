@@ -1,28 +1,17 @@
 import axios from "axios";
 
 export const handler = async (event) => {
-  const config1 = {
+  const config = {
     method: "get",
     url: "https://main.dgsooy6yeh5ar.amplifyapp.com/api/chron",
-    headers: {},
-    timeout: 60000,
+    data: {},
   };
 
-  const request1 = axios(config1);
-  //  const request2 = axios(config2);
-
-  await axios
-    .all([request1])
-    .then(
-      axios.spread((response1) => {
-        //Add response2 after , above
-        // Handle successful responses
-        console.log("Response from endpoint 1:", response1.data);
-        // console.log("Response from endpoint 2:", response2.data);
-      })
-    )
-    .catch((error) => {
-      // Handle errors
-      console.error("Error during requests:", error);
+  await axios(config)
+    .then(function (response) {
+      console.log(JSON.stringify(response.data));
+    })
+    .catch(function (error) {
+      console.log(error);
     });
 };
