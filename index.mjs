@@ -1,13 +1,10 @@
 import axios from "axios";
 
 export const handler = async (event) => {
-  const config = {
+  var config = {
     method: "get",
     url: "https://main.dgsooy6yeh5ar.amplifyapp.com/api/chron",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    data: {},
+    headers: {},
   };
 
   await axios(config)
